@@ -1,4 +1,4 @@
-import { Routes, Route} from "react-router-dom";
+import { Routes, Route, BrowserRouter} from "react-router-dom";
 import './App.css';
 import Header from "components/common/Header/Header";
 import Footer from "components/common/Footer/Footer";
@@ -9,6 +9,7 @@ import ScrollToTop from "components/common/ScrollToTop";
 
 function App() {
   return (
+    <BrowserRouter basename="/mca">
     <div className="App">
       <ScrollToTop />
       <Header />
@@ -19,6 +20,7 @@ function App() {
       </Routes>
       <Footer />
     </div>
+    </BrowserRouter>
   );
 }
 
